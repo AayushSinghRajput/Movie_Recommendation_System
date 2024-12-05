@@ -23,7 +23,7 @@ loginRouter.delete("/user/:id", loginDeleteController);
 
 //Sign router
 SignRouter.get("/user/Sign", SignGetController);
-SignRouter.post("/user/Sign", SignController);
+SignRouter.post("/api/user/Sign", SignController);
 SignRouter.put("/user/:id", SignPutController);
 SignRouter.delete("/user/:id", SignDeleteController);
 
