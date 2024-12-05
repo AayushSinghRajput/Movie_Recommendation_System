@@ -2,11 +2,14 @@ const express = require("express");
 const mongoose = require("mongoose");
 const config = require("./db/config");
 const { userRouter, movieRouter } = require("./routes/indexrouter");
+const { loginRouter, SignRouter } = require("./routes/authrouter");
 const app = express();
 const port = config.port || 5000;
 app.use(express.json());
 app.use(userRouter);
 app.use(movieRouter);
+app.use(loginRouter);
+app.use(SignRouter);
 
 app.get("/", (req, res) => {
   res.status(200).send("Welcome to the Server...");
